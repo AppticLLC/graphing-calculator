@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calculator project - AP Calc BC</title>
+<style>
+canvas {
+    border: solid 1px #c0c0c0;
+    margin-top: 20px;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Helvetica Neue", Arial, Tahoma, sans-serif;
+}
+</style>
+</head>
+<body>
+<h1>AP Calculus BC Graphing Calculator</h1>
+<canvas id="graph" width="800" height="500"></canvas>
+<div>
+f(x) = 
+<input type="text" id="functionString" onkeypress="return enterCheck(event)" /><input type="button" onclick="parseFn()" style="margin-left:10px;" value="Graph" />
+<label><input type="checkbox" id="extrema" /><span style="color:orange;">Extrema</span> <span style="color:#800000;">&amp;</span> <span style="color:purple;">discontinuities</span></label> 
+<label><input type="checkbox" id="poi" />POI</label> 
+<label><input type="checkbox" id="first" />1st</label> 
+<label><input type="checkbox" id="second" /><span style="color:red;">2nd</span></label>
+</div>
+<script src="calc.js"></script>
+</body>
+</html>
